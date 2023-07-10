@@ -8,22 +8,19 @@ const router = createRouter({
       name: "homepage",
       component: () => import("./pages/HomePage.vue"),
     },
-    {
-      path: "/Searchpage",
-      name: "searchpage",
-      component: () => import("./pages/SearchPage.vue"),
-    },
-    // {
-    //   path: "/apartments/:slug",
-    //   name: "single-project",
-    //   component: () => import("./pages/SingleApartmentPage.vue"),
-    // },
     
-    // {
-    //   path: "/:pathMatch(.*)*",
-    //   name: "not-found",
-    //   component: () => import("./pages/NotFound.vue"),
-    // },
+   
+    {
+      path: "/Apartments",
+      name: "apartments",
+      component: () => import("./pages/ApartmentsPage.vue"),
+    },
+    {
+      path: "/Singleapartments",
+      name: "singleapartment",
+      component: () => import("./pages/SingleApartment.vue"),
+    },
+    
   ],
 });
 

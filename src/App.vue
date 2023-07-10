@@ -9,11 +9,10 @@ export default {
 };
 
 </script>
-
 <template>
   <AppHeader />
-  <AppFooter />
   <router-view />
+  <AppFooter />
 </template>
 
 <style lang="scss">

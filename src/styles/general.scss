@@ -1,1 +1,24 @@
 @import "bootstrap/scss/bootstrap.scss";
+@import "node_modules/@fortawesome/fontawesome-free/css/all.css";
+
+body{
+    background-color: rgb(177, 174, 174) ;
+
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .content {
+    flex: 1;
+  }
+  
+  footer {
+    background-color: #01ABE3;
+    color: #000000;
+    padding: 10px;
+    text-align: center;
+  }

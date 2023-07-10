@@ -1,42 +1,45 @@
 <template>
-    <div class="homepage">
-        <div class="banner">
-            <h1 class="text-center mt-4 mb-4">WELCOME TO BOOLBNB</h1>
-            <p class="mt-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste cum nulla quae blanditiis quasi
-                provident mollitia ipsam, porro cumque, sunt voluptas non. Nihil excepturi quas, architecto nam enim fugiat
-                rerum.</p>
+    <div class="homepage ">
+        <div class="banner text-center">
+            <h1 class="text-center mt-4 mb-2">BOOLBNB APARTMENTS</h1>
+            <img class="text-center logo" src="../assets//img/bnb.png" alt="">
+            <a>
+                <router-link class="nav-link btn  " to="/apartments">
+                    Find your next experience
+                </router-link>
+            </a>
         </div>
-        <div class="overlay"></div> 
+        <div class="overlay"></div>
     </div>
 </template>
 
 <style lang="scss" scoped>
 .homepage {
-    height: 700px;
-    background-image: url(../assets/img/homeloft.jpg);
+    height: calc(100vh - 250px);
+    background-image: url(../assets/img/home.jpg);
     background-position: center;
     background-size: cover;
-    position: relative;
-    bottom: 80px;
+    overflow: unset;
 
     .banner {
-        color: white;
-        position: relative;
-        top: 200px;
-        width: 40%;
+        width: 60%;
         margin: 0 auto;
-        z-index: 10;
+        color: white;
+        margin-top: 50px;
+
     }
 
-    .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.4);
-        z-index: 5;
+    .btn {
+        margin: 0 auto;
+        width: 45%;
+        font-size: 2rem;
+
     }
 
+}
+
+.logo {
+    width: 150px;
+    margin: 0 auto;
 }
 </style>
