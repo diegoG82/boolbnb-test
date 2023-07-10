@@ -90,7 +90,7 @@
 
 </template>
 
-<style>
+<style lang="scss" scoped>
 body{
    background-color: #f5f5f5;
 }

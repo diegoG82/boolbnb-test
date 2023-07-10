@@ -2,7 +2,7 @@
     <div class="hero">
         <div class="hero__content">
             <p class="intro-text">BoolBnB</p>
-            <h1 class="big-text">Host indimenticabili per <br> per soggiorni indimenticabili</h1>
+            <h1 class="big-text">Host indimenticabili per <br>  soggiorni indimenticabili</h1>
             <a  href="#" class="button mt-5">Discover More</a>
         </div>
         <img  id="homehero" src="../assets/img/home.jpg" alt="">
