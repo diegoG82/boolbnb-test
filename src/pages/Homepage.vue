@@ -111,10 +111,7 @@
     min-height: 100%;
     z-index: 0;
 }
-.ciao1{
-  display: flex;
-  flex-direction: row-reverse;
-}
+
 
 .hero{
     position: relative;
@@ -150,7 +147,10 @@
 {
 color: white;
 }
-
+.ciao1{
+  display: flex;
+  flex-direction: row-reverse;
+}
 .intro-text{
     text-transform: uppercase;
     font-size: 20px;

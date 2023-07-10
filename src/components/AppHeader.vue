@@ -31,9 +31,9 @@ export default {
       <img src="" alt="logo.pnh">
     </div>
       <ul class="menu">
-        <li><a href="">Home</a></li>
-        <li><a href="">House</a></li>
-        <li><a href="">Contatti</a></li>
+        <li class="nav-item" v-for="menuItem in menuItems" :key="menuItem.routeName">
+              <router-link class="nav-link" :to="menuItem.routeName">{{ menuItem.label }}</router-link>
+            </li>
       </ul>
     <div class="cta">
       <a href="#" class="button">Contatti</a>
