@@ -13,8 +13,8 @@ export default {
           routeName: "apartments",
         },
         {
-          label: "About Us",
-          routeName: "aboutus",
+          label: "Team",
+          routeName: "ourteams",
         },
 
         {

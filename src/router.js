@@ -20,6 +20,11 @@ const router = createRouter({
       name: "singleapartment",
       component: () => import("./pages/SingleApartment.vue"),
     },
+    {
+      path: "/Ourteams",
+      name:"ourteams",
+      component: () => import("./pages/OurTeam.vue"),
+    },
     
   ],
 });
