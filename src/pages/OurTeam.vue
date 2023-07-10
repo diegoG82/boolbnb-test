@@ -10,7 +10,7 @@
         <div class="hero__content">
             <h1 class="big-text">TEAM</h1>
         </div>
-        <img  id="homehero" src="../assets/img/team.jpeg" alt="">
+        <img  id="homehero" src="../assets/img/pungoteam.jpg" alt="">
     </div>
     
 
@@ -20,8 +20,8 @@
          <h1 class="heading">TEAM</h1>
          <div class="card_wrapper">
             <div class="card2">
-               <img src="../assets/img/homeloft.jpg" alt="cardback.png" class="card_img">
-               <img src="../assets/img/homeloft.jpg" alt="profilo.png" class="profile_img">
+               <img src="../assets/img/backcard.jpg" alt="cardback.png" class="card_img">
+               <img src="../assets/img/Luca.jpg" alt="profilo.png" class="profile_img">
                <h1>Luca Petrosa</h1>
                <p class="job_title">Jr. Full-Stack developer</p>
                <p class="a_bout">
@@ -29,15 +29,15 @@
                </p>
                <a href="#" class="btn">Contact</a>
                <ul class="social_media">
-                  <li><a href="#"></a>Social</li>
-                  <li><a href="#"></a>Social</li>
-                  <li><a href="#"></a>Social</li>
-                  <li><a href="#"></a>Social</li>
+                <li><a href="#"></a><i class="fa-brands fa-linkedin"></i></li>
+                  <li><a href="#"></a><i class="fa-brands fa-github" style="color: #000000;"></i></li>
+                  <li><a href="#"></a><i class="fa-solid fa-envelope" style="color: #eb0000;"></i></li>
+                  <li><a href="#"></a><i class="fa-brands fa-instagram" style="color: #ff9500;"></i></li>
                </ul>
             </div>
             <div class="card2">
-               <img src="../assets/img/homeloft.jpg" alt="cardback.png" class="card_img">
-               <img src="../assets/img/homeloft.jpg" alt="profilo.png" class="profile_img">
+               <img src="../assets/img/backcard.jpg" alt="cardback.png" class="card_img">
+               <img src="../assets/img/Stefano.jpg" alt="profilo.png" class="profile_img">
                <h1>Stefano Martino</h1>
                <p class="job_title">Jr. Full-Stack developer</p>
                <p class="a_bout">
@@ -45,15 +45,15 @@
                </p>
                <a href="#" class="btn">Contact</a>
                <ul class="social_media" >
-                  <li><a href="#"></a>Social</li>
-                  <li><a href="#"></a>Social</li>
-                  <li><a href="#"></a>Social</li>
-                  <li><a href="#"></a>Social</li>
+                <li><a href="#"></a><i class="fa-brands fa-linkedin"></i></li>
+                  <li><a href="#"></a><i class="fa-brands fa-github" style="color: #000000;"></i></li>
+                  <li><a href="#"></a><i class="fa-solid fa-envelope" style="color: #eb0000;"></i></li>
+                  <li><a href="#"></a><i class="fa-brands fa-instagram" style="color: #ff9500;"></i></li>
                </ul>
             </div>
             <div class="card2">
-               <img src="../assets/img/homeloft.jpg" alt="cardback.png" class="card_img">
-               <img src="../assets/img/homeloft.jpg" alt="profilo.png" class="profile_img">
+               <img src="../assets/img/backcard.jpg" alt="cardback.png" class="card_img">
+               <img src="../assets/img/diego.png" alt="profilo.png" class="profile_img">
                <h1>Diego Giardina</h1>
                <p class="job_title">Jr. Full-Stack developer</p>
                <p class="a_bout">
@@ -61,15 +61,15 @@
                </p>
                <a href="#" class="btn">Contact</a>
                <ul class="social_media" >
-                  <li><a href="#"></a>Social</li>
-                  <li><a href="#"></a>Social</li>
-                  <li><a href="#"></a>Social</li>
-                  <li><a href="#"></a>Social</li>
+                <li><a href="#"></a><i class="fa-brands fa-linkedin"></i></li>
+                  <li><a href="#"></a><i class="fa-brands fa-github" style="color: #000000;"></i></li>
+                  <li><a href="#"></a><i class="fa-solid fa-envelope" style="color: #eb0000;"></i></li>
+                  <li><a href="#"></a><i class="fa-brands fa-instagram" style="color: #ff9500;"></i></li>
                </ul>
             </div>
             <div class="card2">
-               <img src="../assets/img/homeloft.jpg" alt="cardback.png" class="card_img">
-               <img src="../assets/img/homeloft.jpg" alt="profilo.png" class="profile_img">
+               <img src="../assets/img/backcard.jpg" alt="cardback.png" class="card_img">
+               <img src="../assets/img/Luigi.jpg" alt="profilo.png" class="profile_img">
                <h1>Luigi De Filippo</h1>
                <p class="job_title">Jr. Full-Stack developer</p>
                <p class="a_bout">
@@ -77,10 +77,10 @@
                </p>
                <a href="#" class="btn">Contact</a>
                <ul class="social_media" >
-                  <li><a href="#"></a>Social</li>
-                  <li><a href="#"></a>Social</li>
-                  <li><a href="#"></a>Social</li>
-                  <li><a href="#"></a>Social</li>
+                  <li><a href="#"></a><i class="fa-brands fa-linkedin"></i></li>
+                  <li><a href="#"></a><i class="fa-brands fa-github" style="color: #000000;"></i></li>
+                  <li><a href="#"></a><i class="fa-solid fa-envelope" style="color: #eb0000;"></i></li>
+                  <li><a href="#"></a><i class="fa-brands fa-instagram" style="color: #ff9500;"></i></li>
                </ul>
             </div>
          </div>
@@ -98,8 +98,8 @@ body{
 
 #homehero{
     position: absolute;
-    top: 2;
-    right: 30 ;
+    top: 10;
+    right: 20 ;
     min-width: 100%;
     min-height: 100%;
     z-index: 0;
@@ -108,7 +108,7 @@ body{
 
 .hero{
     position: relative;
-    height: 100vh;
+    height: 650px;
     display: flex;
     width: 100%;
     align-items: center;
@@ -195,7 +195,7 @@ color: white;
 }
 .card2 .card_img{
    width: 100%;
-   height: 26rem;
+   height: 25rem;
    object-fit: cover;
    clip-path: polygon(0 0, 100% 0, 100% 78%, 0% 100%);
 }
@@ -261,6 +261,7 @@ color: white;
 
 .social_media i{
    font-size: 3rem;
+   cursor: pointer;
 }
 
 @media  screen and (min-width: 700px) {
