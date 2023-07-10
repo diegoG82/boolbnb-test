@@ -24,7 +24,7 @@ const router = createRouter({
       path: "/Ourteams",
       name:"ourteams",
       component: () => import("./pages/OurTeam.vue"),
-    },
+    }
     
   ],
 });

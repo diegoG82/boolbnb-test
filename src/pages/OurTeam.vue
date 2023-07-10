@@ -6,21 +6,13 @@
 
 
 <template>
-    <div class="hero">
-        <div class="hero__content">
-            <h1 class="big-text">TEAM</h1>
-        </div>
-        <img  id="homehero" src="../assets/img/pungoteam.jpg" alt="">
-    </div>
-    
-
     <!-- SECONDO TIPO TEAM -->
     <section class="section2">
       <div class="container">
          <h1 class="heading">TEAM</h1>
          <div class="card_wrapper">
             <div class="card2">
-               <img src="../assets/img/backcard.jpg" alt="cardback.png" class="card_img">
+               <img src="../assets/img/back2card.jpg" alt="cardback.png" class="card_img">
                <img src="../assets/img/Luca.jpg" alt="profilo.png" class="profile_img">
                <h1>Luca Petrosa</h1>
                <p class="job_title">Jr. Full-Stack developer</p>
@@ -36,7 +28,7 @@
                </ul>
             </div>
             <div class="card2">
-               <img src="../assets/img/backcard.jpg" alt="cardback.png" class="card_img">
+               <img src="../assets/img/back2card.jpg" alt="cardback.png" class="card_img">
                <img src="../assets/img/Stefano.jpg" alt="profilo.png" class="profile_img">
                <h1>Stefano Martino</h1>
                <p class="job_title">Jr. Full-Stack developer</p>
@@ -52,7 +44,7 @@
                </ul>
             </div>
             <div class="card2">
-               <img src="../assets/img/backcard.jpg" alt="cardback.png" class="card_img">
+               <img src="../assets/img/back2card.jpg" alt="cardback.png" class="card_img">
                <img src="../assets/img/diego.png" alt="profilo.png" class="profile_img">
                <h1>Diego Giardina</h1>
                <p class="job_title">Jr. Full-Stack developer</p>
@@ -68,7 +60,7 @@
                </ul>
             </div>
             <div class="card2">
-               <img src="../assets/img/backcard.jpg" alt="cardback.png" class="card_img">
+               <img src="../assets/img/back2card.jpg" alt="cardback.png" class="card_img">
                <img src="../assets/img/Luigi.jpg" alt="profilo.png" class="profile_img">
                <h1>Luigi De Filippo</h1>
                <p class="job_title">Jr. Full-Stack developer</p>
@@ -94,58 +86,6 @@
 body{
    background-color: #f5f5f5;
 }
-
-
-#homehero{
-    position: absolute;
-    top: 10;
-    right: 20 ;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: 0;
-}
-
-
-.hero{
-    position: relative;
-    height: 650px;
-    display: flex;
-    width: 100%;
-    align-items: center;
-    background: linear-gradient(0deg, rgba(0,0,0,.2) rgba(0,0,0,0.9) 70.71%), url() no-repeat center center;
-    background-size: cover;
-    overflow: hidden;
-}
-
-.hero::after{
-    content: '';
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: black;
-    opacity: 0.4;
-}
-.hero__content{
-    width: 100%;
-    max-width: 1350px;
-    margin: 0 auto;
-    z-index: 1;
-    position: relative;
-}
-.hero__content h1,
-.hero__content p
-{
-color: white;
-}
-.big-text{
-   text-align: center;
-}
-
-
-
 
 /* CARD 2 PROVA  */
 .section2{

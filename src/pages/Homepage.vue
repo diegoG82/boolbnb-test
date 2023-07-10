@@ -1,3 +1,15 @@
+<script>
+import{TrandingSlider}from"../logicacarosello"
+export default{
+  name : "logicacarosello",
+ data(){
+  return{
+    TrandingSlider
+  }
+ } }
+</script>
+
+
 <template>
     <div class="hero">
         <div class="hero__content">
@@ -7,82 +19,6 @@
         </div>
         <img  id="homehero" src="../assets/img/home.jpg" alt="">
     </div>
-
-<div class="container">
-  <h2 class="text-center p-5">Il Tuo Soggiorno da Sogno si trova  in una di queste Case </h2>
-  <div class="poster">
-    <div class="poster__img">
-      <img src="../assets/img/fotoverticale.jpeg" alt="fotodamettere.png">
-    </div>
-    <div class="poster__content">
-      <h3 class="text-poster">
-        Modern House in Austin 
-      </h3>
-<br>
-      <h6>040 Scarlett Stream, Austin, New Jersey</h6>
-<br>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima inventore beatae id hic doloremque sunt laboriosam, voluptas consectetur. Aliquid in commodi odio similique accusamus obcaecati fuga, illo architecto ea adipisci!</p>
-<br>
-<br>
-      <div class="d-flex">
-        <h6>3000</h6>
-        <p>Square feet</p>
-      </div>
-      <div class="d-flex ">
-         <p>Numero di persone ospitabili</p>
-         <h6>12</h6>
-      </div>
-      <div class="d-flex ">
-         <p>Numero Di Bagni</p>
-         <h6>3</h6>
-      </div>
-      <div class="d-flex  ">
-         <p>Letti</p>
-         <h6>5</h6>
-      </div>
-      <button type="button" class="btn btn-info">Scopri di più</button>
-    </div>
-  </div>
-</div>
-
-<div class="container ">
-  <div class="poster ciao1">
-    <div class="poster__img">
-      <img src="../assets/img/fotoverticale.jpeg" alt="fotodamettere.png">
-    </div>
-    <div class="poster__content">
-      <h3 class="text-poster">
-        Modern House in Austin 
-      </h3>
-<br>
-      <h6>040 Scarlett Stream, Austin, New Jersey</h6>
-<br>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima inventore beatae id hic doloremque sunt laboriosam, voluptas consectetur. Aliquid in commodi odio similique accusamus obcaecati fuga, illo architecto ea adipisci!</p>
-<br>
-<br>
-      <div class="d-flex">
-        <h6>3000</h6>
-        <p>Square feet</p>
-      </div>
-      <div class="d-flex ">
-         <p>Numero di persone ospitabili</p>
-         <h6>12</h6>
-      </div>
-      <div class="d-flex ">
-         <p>Numero Di Bagni</p>
-         <h6>3</h6>
-      </div>
-      <div class="d-flex ">
-         <p>Letti</p>
-         <h6>5</h6>
-      </div>
-      <button type="button" class="btn btn-info">Scopri di più</button>
-    </div>
-  </div>
-</div>
-
-
-
 </template>
 
 
