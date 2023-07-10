@@ -31,57 +31,102 @@ export default {
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand">
-        <router-link class="nav-link text-white" to="/"><img class="logo mr-1" src="../assets/img/bnb.png" alt=""> BOOLBNB </router-link></a>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse " id="navbarSupportedContent">
-        <div class="ms-auto">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item" v-for="menuItem in menuItems" :key="menuItem.routeName">
-              <router-link class="nav-link" :to="menuItem.routeName">{{ menuItem.label }}</router-link>
-            </li>
-          </ul>
-        </div>
-
-
+  <div class="header">
+    <div class="logo">
+        <img src="" alt="logo.pnh">
       </div>
-    </div>
-  </nav>
-</template>
-
-<style lang="scss" scoped>
-.navbar {
-  height: 50px;
-  width: 100%;
-  z-index: 999;
- background-color: #01ABE3 !important;
-
-
+        <ul class="menu">
+          <li class="nav-item" v-for="menuItem in menuItems" :key="menuItem.routeName">
+                <router-link class="nav-link" :to="menuItem.routeName">{{ menuItem.label }}</router-link>
+              </li>
+        </ul>
+      <div class="cta">
+        <a href="#" class="button">Contatti</a>
+      </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+  </div>
   
-
-  .btn {
-    border-radius: 120px;
-    border: 1px solid black;
-    background-color: #01ABE3;
-
+  
+  
+  </template>
+  
+  <style lang="scss" sccoped>
+  .header{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 30px;
+  display: flex;
+  max-width: 1350px;
+  z-index: 10;
+  
   }
-
-
-}
-
-.logo{
-  width: 40px;
-  border-radius: 50%;
-  background-color: white;
-}
-
-
-</style>
+  
+  .menu{
+    width: 100%;
+  }
+  
+  .menu li{
+    display: inline-block;
+  }
+  .menu li a {
+    color: white;
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    
+  }
+  .button{
+    padding: 18px 28px;
+    background: #316bff; 
+    color: white;
+    display: inline-block;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+   
+  
+  
+  
+  .hamburger{
+    display: none;
+  }
+  @media(max-width:768px) {
+  .cta{
+      display: none;
+  }
+  .menu{
+    position: absolute;
+    top: 0;
+    right:-100;
+    height: 100vh;
+    padding-top:80px ;
+  }
+  .menu li {
+    display: block;
+  }
+  
+  .hamburger{
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 40px;
+    right:30px;
+  }
+  .hamburger span{
+    background-color: white;
+    height: 3px;
+    width: 100%;
+    display:block ;
+    margin-bottom: 5px;
+  }
+   }
+  </style>
 
