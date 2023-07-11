@@ -129,9 +129,5 @@ export default {
     margin-bottom: 5px;
   }
    }
-<<<<<<< HEAD
-  </style>
-=======
   </style>
 
->>>>>>> origin/main

@@ -25,15 +25,12 @@ const router = createRouter({
       name: "singleapartment",
       component: () => import("./pages/SingleApartment.vue"),
     },
-<<<<<<< HEAD
-=======
     {
       path: "/Ourteams",
       name:"ourteams",
       component: () => import("./pages/OurTeam.vue"),
     }
     
->>>>>>> origin/main
   ],
 });
 
