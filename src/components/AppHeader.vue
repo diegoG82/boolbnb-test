@@ -33,7 +33,7 @@ export default {
 <template>
   <div class="header">
     <div class="logo">
-        <img src="" alt="logo.pnh">
+        <img src="../assets/img/" alt="logo.pnh">
       </div>
         <ul class="menu">
           <li class="nav-item" v-for="menuItem in menuItems" :key="menuItem.routeName">

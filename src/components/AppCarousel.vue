@@ -1,15 +1,20 @@
 <template>
-    <h2 class="text-center mt-2 mb-2">OUR APARTMENTS:</h2>
-    <swiper :slidesPerView="3" :spaceBetween="30" :pagination="{
-        clickable: true,
-    }" :modules="modules" class="mySwiper">
-        <swiper-slide><img src="../assets/img/bolobnb.jpg" alt=""></swiper-slide>
-        <swiper-slide><img src="../assets/img/bolobnb.jpg" alt=""></swiper-slide>
-        <swiper-slide><img src="../assets/img/loft1.jpg" alt=""></swiper-slide>
-        <swiper-slide><img src="../assets/img/homeloft.jpg" alt=""></swiper-slide><swiper-slide><img
-                src="../assets/img/bolobnb.jpg" alt=""></swiper-slide>
-        <swiper-slide><img src="../assets/img/searchloft.jpg" alt=""></swiper-slide><swiper-slide><img src="../assets/img/bolobnb.jpg" alt=""></swiper-slide>
-        <swiper-slide><img src="../assets/img/home.jpg" alt=""> </swiper-slide><swiper-slide><img src="../assets/img/loft1.jpg" alt=""></swiper-slide>
+    <h2 class="text-center mb-4 mt-4">TRENDING APPARTMENTS</h2>
+    <p>Sponsored:</p>
+    <swiper :spaceBetween="5" :slidesPerView="3" :centeredSlides="false"
+        :autoplay="{ delay: 2500, disableOnInteraction: true }" :pagination="{ clickable: true }" :navigation="true"
+        :modules="modules" class="mySwiper" loop :loopedSlides="2">
+        <swiper-slide><a href=""><img src="../assets/img/bolobnb.jpg" alt=""></a></swiper-slide>
+        <swiper-slide><a href=""><img src="../assets/img/loft1.jpg" alt=""></a></swiper-slide>
+        <swiper-slide><a href=""><img src="../assets/img/bolobnb.jpg" alt=""></a></swiper-slide>
+        <swiper-slide><a href=""><img src="../assets/img/bolobnb.jpg" alt=""></a></swiper-slide>
+        <swiper-slide><a href=""><img src="../assets/img/bolobnb.jpg" alt=""></a></swiper-slide>
+        <swiper-slide><a href=""><img src="../assets/img/bolobnb.jpg" alt=""></a></swiper-slide>
+        <swiper-slide><a href=""><img src="../assets/img/homeloft.jpg" alt=""></a></swiper-slide>
+        <swiper-slide><a href=""><img src="../assets/img/bolobnb.jpg" alt=""></a></swiper-slide>
+        <swiper-slide><a href=""><img src="../assets/img/bolobnb.jpg" alt=""></a></swiper-slide>
+
+
     </swiper>
 </template>
 <script>
@@ -20,11 +25,11 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 
 // import 'swiper/css/pagination';
-
+import 'swiper/css/navigation';
 
 
 // import required modules
-import { Pagination } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 export default {
     components: {
@@ -33,50 +38,36 @@ export default {
     },
     setup() {
         return {
-            modules: [Pagination],
+            modules: [Autoplay, Pagination, Navigation],
         };
     },
 };
 </script>
 <style>
-
-
-
-/* body {
-    background: #eee;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    color: #000;
-    margin: 0;
-    padding: 0;
-} */
-
 .swiper {
-    margin-top: 20px;
     width: 100%;
-    height: 100%;
-    background-color:#316bff;
-
-    /* border: 1px solid black; */
+    height: 300px;
+    margin-bottom: 20px;
 }
 
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-
-    /* Center slide text vertically */
+    /* background: #fff; */
+    /* border: 1px solid black; */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    padding: 1.5rem;
 
+    display: block;
+    width: 550px;
+
+    height: 310px;
+    object-fit: cover;
+    border-radius: 50px
 }
 </style>
   
