@@ -1,46 +1,74 @@
 <template>
-    <div class="container mt-4">
-        <div class="row">
-            <div class="col-md-6">
-                <img :src="imagePath" alt="Apartment Image" class="img-fluid">
-            </div>
-            <div class="col-md-6">
-                <div class="card apartment">
-                    <div class="card-body">
-                        <h3 class="card-title text-uppercase mt-4">{{ apartment.name }}</h3>
-                        <p class="card-text">{{ apartment.address }}, {{ apartment.city }}, {{ apartment.state }}</p>
-                        <div class="row">
-                            <div class="col-6  d-flex details">
-                                <p class="mr-4"><i class="fa-solid fa-expand"></i> {{ apartment.square_meters }} sqm</p>
-                                <p class="mr-4"><i class="fa-solid fa-bed"></i> {{ apartment.bed_number }}</p>
-                                <p><i class="fa-solid fa-bath"></i> {{ apartment.bathroom_number }}</p>
-                                <p><i class="fa-solid fa-euro-sign"></i> {{ apartment.price }} at night</p>
-                            </div>
-                        </div>
-                        <div class="mt-2">
-                            <p>{{ apartment.description }}</p>
-                        </div>
-                        <div class="mt-4 d-flex">
-                            <button class="btn"><i class="fa-solid fa-wifi"></i> wifi</button>
-                            <button class="btn"><i class="fa-solid fa-square-parking"></i> Parking</button>
-                            <button class="btn"><i class="fa-solid fa-person-swimming"></i> Swimming Pool</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12 mt-4">
-                <div class="card">
-                    <div class="map_img">
-                        <img src="../assets/img/map.png" alt="map_img">
-                    </div>
-                </div>
-            </div>
+    <div class="hero">
+        <div class="hero__content">
+            <h1 class="big-text">{{ apartment.name }}</h1>
+            <p>{{ apartment.address }} {{ apartment.city }} {{ apartment.state }}</p>
         </div>
+        <img id="homehero" src="../assets/img/loft1.jpg" alt="">
+    </div>
+
+
+    <div class="ms-container house mt-4 d-flex">
+
+        <div class=" mt-4 ">
+            <div class="details d-flex">
+                <p><i class="fa-solid fa-expand"></i> {{ apartment.square_meters }} sqm</p>
+                <p><i class="fa-solid fa-bed"></i> {{ apartment.bed_number }}</p>
+                <p><i class="fa-solid fa-bath"></i> {{ apartment.bathroom_number }}</p>
+                <p><i class="fa-solid fa-euro-sign"></i> {{ apartment.price }} at night</p>
+            </div>
+
+            <div class="services mt-4 d-flex "> <button class="btn"><i class="fa-solid fa-wifi"></i> wifi</button>
+                <button class="btn"><i class="fa-solid fa-square-parking"></i> Parking</button>
+                <button class="btn"><i class="fa-solid fa-person-swimming"></i> Swimming Pool</button>
+            </div>
+
+
+            <div class="description mt-4  d-flex">
+                <p>{{ apartment.description }}</p>
+            </div>
+
+
+        </div>
+
+
+
+
+        <div class="contact-us  d-flex flex-column mt-4">
+            <form>
+                <div>
+                    <label for="name" class="form-label">Name</label>
+                    <input type="name" class="form-control" id="name" placeholder="Name">
+                </div>
+                <div>
+                    <label for="surname" class="form-label">Surname</label>
+                    <input type="Surname" class="form-control" id="surname" placeholder="Surname">
+                </div>
+
+
+                <div>
+                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Contact Us</button>
+            </form>
+        </div>
+
+     
+    </div>
+
+    <div class="ms-container map mt-4 mb-4">
+        <img src="../assets/img/map.png" alt="">
+
     </div>
 </template>
   
 <script>
-import bolobnbImage from '../assets/img/homeloft.jpg';
+import bolobnbImage from '../assets/img/loft1.jpg';
 
 export default {
     name: 'SingleApartmentPage',
@@ -66,110 +94,138 @@ export default {
 };
 </script>
   
-<style scoped>
-.img-fluid {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 5px;
-    border: 1px solid transparent;
-    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
-    box-shadow: 0px 0px 0px 5px transparent;
-}
-
-.card {
-    height: 300px;
-    border-radius: 5px;
-    border: 1px solid transparent;
-    font-size: 0.8rem;
-    overflow: hidden;
-    transition: border-color 0.3s, transform 0.3s;
-}
-
-.card:hover,
-.img-fluid:hover {
-    border-color: #01ABE3;
-    box-shadow: 0px 0px 0px 5px #01ABE3;
-    transform: scale(1.05);
-}
-
-.card-content {
-    /* background-color: var(--card-color); */
-    border-radius: inherit;
-    display: grid;
-    inset: 1px;
-    padding: 1em;
+<style lang="scss" scoped>
+#homehero {
     position: absolute;
-    transition: background-color 0.3s;
-}
-
-.card:hover .card-content {
-    background-color: transparent;
-}
-
-.card h3 {
-    color: #01ABE3;
-    margin-top: 1rem;
-    transition: color 0.3s;
+    top: 2;
+    right: 30;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 0;
 }
 
 
-
-.card-text {
-    transition: color 0.3s;
-}
-
-
-
-.map_img {
+.hero {
+    position: relative;
+    height: 500px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 300px;
-}
-
-.map_img img {
-    max-width: 100%;
-    max-height: 100%;
     width: 100%;
+    align-items: center;
+    background: linear-gradient(0deg, rgba(0, 0, 0, .2) rgba(0, 0, 0, 0.9) 70.71%), url() no-repeat center center;
+    background-size: cover;
     object-fit: cover;
+    overflow: hidden;
 }
 
-ul {
-    padding: none;
+.hero::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.4;
 }
 
-.btn {
-    background-color: #01ABE3;
+.hero__content {
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
+    z-index: 1;
+    position: relative;
+}
+
+.hero__content h1,
+.hero__content p {
     color: white;
-    border-radius: 15px;
-    margin-right: 1rem;
-    font-size: 0.7rem;
-    border: none;
-    pointer-events: none;
-    transition: background-color 0.3s;
 }
 
-.btn:hover {
-    background-color: #439CB4;
+.ciao1 {
+    display: flex;
+    flex-direction: row-reverse;
 }
 
-.btn:active {
-    background-color: #A6C4D2;
+.intro-text {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
 }
 
-.details p {
-    margin-right: 1rem;
+.big-text {
+    font-size: 70px;
 }
 
-.details i {
-    color: #01ABE3;
+
+.ms-container {
+  
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
+
+    .services {
+        width: 50%;
+
+        .btn {
+            background-color: #01abe3;
+            color: white;
+            border-radius: 20px;
+            margin-right: 1rem;
+        }
+    }
+
+    .house {
+        width: 100%;
+        height: 150px;
+    }
+
+    .details {
+        width: 50%;
+
+        p {
+            margin-right: 1rem;
+        }
+
+        i {
+            color: #01abe3;
+        }
+    }
+
+    .description {
+        width: 50%;
+        font-size:25px;
+    }
+
+    .contact-us {
+        width: 40%;
+        border: 5px solid #01abe3;
+        background-color: white;
+        font-size: 1rem;
+        border-radius: 30px;
+        padding: 2rem;
+        // position: relative;
+        // bottom:250px
+       
+    }
+
+    .contact-us .btn{
+           background-color: #01abe3 ;
+           color: white;
+           border: none;
+           border-radius: 20px;
+        }
+
 }
 
-.container{
-    height: calc(100vh - 275px);
-}
-.row{
-    margin-top: 30px;
+.map {
+    height: 300px;
+    position: relative;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
 }
 </style>
