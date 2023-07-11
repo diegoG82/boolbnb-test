@@ -76,7 +76,8 @@ export default {
     display: inline-block;
   }
   .menu li a {
-    color: white;
+    color: black;
+    font-size: 20px ;
     display: block;
     padding: 15px;
     text-decoration: none;

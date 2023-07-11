@@ -1,13 +1,88 @@
 <script>
-import{TrandingSlider}from"../logicacarosello"
-export default{
-  name : "logicacarosello",
- data(){
-  return{
-    TrandingSlider
-  }
- } }
+import Swiper from 'swiper';
+
+export default {
+  mounted() {
+    new Swiper('.tranding-slider', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      loop: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 2.5,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+    });
+  },
+  data() {
+    return {
+      slides: [
+        {
+          image: '../assets/img/home.jpg',
+          alt: 'Tranding',
+          price: '$20',
+          name: 'michale jordan 23',
+          rating: '4.5',
+        },
+        {
+          image: '../assets/img/home.jpg',
+          alt: 'Tranding',
+          price: '$20',
+          name: 'Meat 23',
+          rating: '4.5',
+        },
+        {
+          image: '../assets/img/home.jpg',
+          alt: 'Tranding',
+          price: '$40',
+          name: 'villa bye',
+          rating: '4.5',
+        },
+        {
+          image: '../assets/img/home.jpg',
+          alt: 'Tranding',
+          price: '$15',
+          name: 'Villa ciao',
+          rating: '4.5',
+        },
+        {
+          image: '../assets/img/home.jpg',
+          alt: 'Tranding',
+          price: '$15',
+          name: 'Bayer moncao',
+          rating: '4.5',
+        },
+        {
+          image: '../assets/img/home.jpg',
+          alt: 'Tranding',
+          price: '$20',
+          name: 'Montecarlo Appart',
+          rating: '4.5',
+        },
+        {
+          image: '../assets/img/home.jpg',
+          alt: 'Tranding',
+          price: '$8',
+          name: 'Polo Nord',
+          rating: '4.5',
+        },
+      ],
+    };
+  },
+};
 </script>
+
 
 
 <template>
@@ -19,6 +94,7 @@ export default{
         </div>
         <img  id="homehero" src="../assets/img/home.jpg" alt="">
     </div>
+   
 </template>
 
 
@@ -154,4 +230,6 @@ color: white;
 }
 
  }
+
+ 
 </style>
