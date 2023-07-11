@@ -51,4 +51,8 @@ export default {
     .right-section span {
       margin-right: 10px;
     }
+<<<<<<< HEAD
 </style>
+=======
+</style>
+>>>>>>> origin/main
