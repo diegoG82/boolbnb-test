@@ -103,11 +103,13 @@ export default {
       display: none;
   }
   .menu{
+
     position: absolute;
     top: 0;
-    right:-100;
+    right: -100%;
+    background-color: #000;
     height: 100vh;
-    padding-top:80px ;
+    padding-top: 80px;
   }
   .menu li {
     display: block;
