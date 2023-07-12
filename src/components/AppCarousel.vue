@@ -2,30 +2,102 @@
     <h2 class="text-center mt-2 mb-2">OUR APARTMENTS:</h2>
     <swiper :spaceBetween="5" :slidesPerView="3" :centeredSlides="false"
         :autoplay="{ delay: 2500, disableOnInteraction: true }" :pagination="{ clickable: true }" :navigation="true"
-        :modules="modules" class="mySwiper" loop :loopedSlides="9">
+        :modules="modules" class="mySwiper" loop :loopedSlides="2">
 
 
-       
-        <swiper-slide><img src="../assets/img/bolobnb.jpg" alt=""></swiper-slide>
-        <swiper-slide><img src="../assets/img/bolobnb.jpg" alt=""></swiper-slide>
-        <swiper-slide><img src="../assets/img/loft1.jpg" alt=""></swiper-slide>
-        <swiper-slide><img src="../assets/img/homeloft.jpg" alt=""></swiper-slide>
-        <swiper-slide><img src="../assets/img/bolobnb.jpg" alt=""></swiper-slide>
-        <swiper-slide><img src="../assets/img/searchloft.jpg" alt=""></swiper-slide>
-        <swiper-slide><img src="../assets/img/bolobnb.jpg" alt=""></swiper-slide>
-        <swiper-slide><img src="../assets/img/home.jpg" alt=""> </swiper-slide>
-        <swiper-slide><img src="../assets/img/loft1.jpg" alt=""></swiper-slide>
-                <swiper-slide><img src="../assets/img/homeloft.jpg" alt=""></swiper-slide><swiper-slide><img
-                src="../assets/img/bolobnb.jpg" alt=""></swiper-slide>
-        <swiper-slide><img src="../assets/img/searchloft.jpg" alt=""></swiper-slide><swiper-slide><img
-                src="../assets/img/bolobnb.jpg" alt=""></swiper-slide>
-        <swiper-slide><img src="../assets/img/home.jpg" alt=""> </swiper-slide><swiper-slide><img
-                src="../assets/img/loft1.jpg" alt=""></swiper-slide>    
+
+        <swiper-slide><img src="../assets/img/homeloft.jpg" alt="">
+            <div class="details">
+                <h5>Superhotel fighissimo</h5>
+                <p><i class="fa-solid fa-location-dot"></i> Bologna</p>
+                <p>300<i class="fa-solid fa-euro-sign"></i> at night</p>
+            </div>
+            <div class="sponsored"><i class="fa-solid fa-star"></i></div>
+        </swiper-slide>
+
+        <swiper-slide><img src="../assets/img/loft1.jpg" alt="">
+            <div class="details">
+                <h5>Apartment name</h5>
+                <p>Apartment city</p>
+                <p>apartment price</p>
+            </div>
+
+            <div class="sponsored"><i class="fa-solid fa-star"></i></div>
+        </swiper-slide>
+
+        <swiper-slide><img src="../assets/img/bolobnb.jpg" alt="">
+            <div class="details">
+                <h5>Apartment name</h5>
+                <p>Apartment city</p>
+                <p>apartment price</p>
+            </div>
+            <div class="sponsored"><i class="fa-solid fa-star"></i></div>
+        </swiper-slide>
+
+        <swiper-slide><img src="../assets/img/bolobnb.jpg" alt="">
+            <div class="details">
+                <h5>Superhotel fighissimo missisi</h5>
+                <p><i class="fa-solid fa-location-dot"></i> Bologna</p>
+                <p>300<i class="fa-solid fa-euro-sign"></i> at night</p>
+            </div>
+
+            <div class="sponsored"><i class="fa-solid fa-star"></i></div>
+        </swiper-slide>
+
+        <swiper-slide><img src="../assets/img/bolobnb.jpg" alt="">
+            <div class="details">
+                <h5>Apartment name</h5>
+                <p>Apartment city</p>
+                <p>apartment price</p>
+            </div>
+
+            <div class="sponsored"><i class="fa-solid fa-star"></i></div>
+        </swiper-slide>
+
+        <swiper-slide><img src="../assets/img/bolobnb.jpg" alt="">
+            <div class="details">
+                <h5>Apartment name</h5>
+                <p>Apartment city</p>
+                <p>apartment price</p>
+            </div>
+            <div class="sponsored"><i class="fa-solid fa-star"></i></div>
+        </swiper-slide>
+
+        <swiper-slide><img src="../assets/img/home.jpg" alt="">
+            <div class="details">
+                <h5>Hotel Bologna </h5>
+                <p><i class="fa-solid fa-location-dot"></i> Bologna</p>
+                <p>300<i class="fa-solid fa-euro-sign"></i> at night</p>
+            </div>
+
+            <div class="sponsored"><i class="fa-solid fa-star"></i></div>
+        </swiper-slide>
+
+        <swiper-slide><img src="../assets/img/bolobnb.jpg" alt="">
+            <div class="details">
+                <h5>Apartment name</h5>
+                <p>Apartment city</p>
+                <p>apartment price</p>
+            </div>
+
+
+         
+    <div class="sponsored"><i class="fa-solid fa-star"></i></div>
+        </swiper-slide>
+
+        <swiper-slide><img src="../assets/img/loft1.jpg" alt="">
+            <div class="details">
+                <h5>Apartment name</h5>
+                <p>Apartment city</p>
+                <p>apartment price</p>
+            </div>
+            <div class="sponsored"><i class="fa-solid fa-star"></i></div>
+        </swiper-slide>
+
     </swiper>
     <div class="containerbtn">
-        <a  href="#" class="button mt-3 ">See All</a>
+        <a href="#" class="button mt-3 ">See All</a>
     </div>
-    
 </template>
 <script>
 // Import Swiper Vue.js components
@@ -54,35 +126,16 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-
-
-
-/* body {
-    background: #eee;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    color: #000;
-    margin: 0;
-    padding: 0;
-} */
-
 .swiper {
-    margin-top: 20px;
+    margin-top: 10px;
     width: 100%;
     height: 100%;
-    /* background-color:#316bff; */
-
-    /* border: 1px solid black; */
 }
 
 .swiper-slide {
-    text-align: center;
-    font-size: 18px;
+    font-size: 0.7rem;
+    position: relative;
 
-    /* Center slide text vertically */
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
 }
 
@@ -92,9 +145,52 @@ export default {
     height: 300px;
     object-fit: cover;
     padding: 1.5rem;
+    filter: brightness(80%);
+    /* Modifica la percentuale di luminosità (50% in questo esempio) */
+
+
 
 }
-.containerbtn{
+
+.details {
+    position: absolute;
+    width: 250px;
+    top: 210px;
+    right: 295px;
+    color: whitesmoke;
+    z-index: 999;
+
+
+
+}
+
+.details h5 {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    font-weight: 700;
+}
+
+.details p {
+    margin-bottom: 0.1rem;
+}
+
+
+
+.sponsored {
+    color: red;
+    font-weight: 700;
+    position: absolute;
+    bottom: 245px;
+    right: 35px;
+}
+
+.sponsored i {
+    font-size: 1.2rem;
+}
+
+
+
+.containerbtn {
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
