@@ -77,8 +77,19 @@ export default {
         </div>
         <img  id="homehero" src="../assets/img/apartament.jpeg" alt="">
     </div>
-    <div class="container mt-4">
+    <div class="container mt-5">
+        <div class="box">
+            <div class="search-box">
+                <input type="text" name="searchbar" placeholder="Search here...">
+                <label for="" class="icon">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #0b57da;"></i>
+                </label>
+            </div>
+        </div>
+    </div>
 
+
+    <div class="container mt-4">
         <div class="row">
             <div class="col-3 mb-5" v-for="apartment in apartments" :key="apartment.id">
                 <div class="column-bg card text-center">
