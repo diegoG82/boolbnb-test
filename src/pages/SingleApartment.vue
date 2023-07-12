@@ -11,12 +11,14 @@
     <div class="ms-container house mt-4 d-flex">
 
         <div class=" mt-4 ">
-            <div class="details d-flex">
+            <div class="details d flex">
                 <p><i class="fa-solid fa-expand"></i> {{ apartment.square_meters }} sqm</p>
                 <p><i class="fa-solid fa-bed"></i> {{ apartment.bed_number }}</p>
                 <p><i class="fa-solid fa-bath"></i> {{ apartment.bathroom_number }}</p>
                 <p><i class="fa-solid fa-euro-sign"></i> {{ apartment.price }} at night</p>
             </div>
+
+            <br class="">
 
             <div class="services mt-4 d-flex "> <button class="btn"><i class="fa-solid fa-wifi"></i> wifi</button>
                 <button class="btn"><i class="fa-solid fa-square-parking"></i> Parking</button>
@@ -24,7 +26,7 @@
             </div>
 
 
-            <div class="description mt-4  d-flex">
+            <div class="description mt-4 d-flex">
                 <p>{{ apartment.description }}</p>
             </div>
 
@@ -34,7 +36,7 @@
 
 
 
-        <div class="contact-us  d-flex flex-column mt-4">
+        <div class="contact-us d-flex mt-4">
             <form>
                 <div>
                     <label for="name" class="form-label">Name</label>
@@ -104,7 +106,6 @@ export default {
     z-index: 0;
 }
 
-
 .hero {
     position: relative;
     height: 500px;
@@ -157,15 +158,13 @@ export default {
     font-size: 70px;
 }
 
-
 .ms-container {
-  
     width: 100%;
     max-width: 1350px;
     margin: 0 auto;
 
     .services {
-        width: 50%;
+        width: 100%;
 
         .btn {
             background-color: #01abe3;
@@ -177,11 +176,11 @@ export default {
 
     .house {
         width: 100%;
-        height: 150px;
+        height: auto;
     }
 
     .details {
-        width: 50%;
+        width: 100%;
 
         p {
             margin-right: 1rem;
@@ -193,29 +192,27 @@ export default {
     }
 
     .description {
-        width: 50%;
-        font-size:25px;
+        width: 100%;
+        font-size: 25px;
+        margin-bottom: 2rem;
     }
 
     .contact-us {
-        width: 40%;
+        width: 100%;
         border: 5px solid #01abe3;
         background-color: white;
         font-size: 1rem;
         border-radius: 30px;
         padding: 2rem;
-        // position: relative;
-        // bottom:250px
-       
-    }
+        margin-top: 2rem;
 
-    .contact-us .btn{
-           background-color: #01abe3 ;
-           color: white;
-           border: none;
-           border-radius: 20px;
+        .btn {
+            background-color: #01abe3;
+            color: white;
+            border: none;
+            border-radius: 20px;
         }
-
+    }
 }
 
 .map {
@@ -228,4 +225,46 @@ export default {
         height: 100%;
     }
 }
+
+@media (max-width: 768px) {
+    .hero {
+        height: 300px;
+    }
+
+    .big-text {
+        font-size: 40px;
+    }
+
+    .ms-container {
+        .services {
+            flex-wrap: wrap;
+
+            .btn {
+                margin-bottom: 1rem;
+            }
+        }
+
+        .description {
+            margin-bottom: 2rem;
+        }
+
+        .contact-us {
+            width: 100%;
+            margin-top: 2rem;
+        }
+    }
+
+    .map {
+        height: 200px;
+    }
+}
+
+@media (max-width: 375px) {
+    .ms-container {
+        .description {
+            font-size: 20px;
+        }
+    }
+}
 </style>
+
