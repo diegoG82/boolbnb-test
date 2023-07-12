@@ -1,18 +1,26 @@
 <template>
     <h2 class="text-center mt-2 mb-2">OUR APARTMENTS:</h2>
-    <swiper :spaceBetween="5" :slidesPerView="5" :centeredSlides="false"
+    <swiper :spaceBetween="5" :slidesPerView="3" :centeredSlides="false"
         :autoplay="{ delay: 2500, disableOnInteraction: true }" :pagination="{ clickable: true }" :navigation="true"
-        :modules="modules" class="mySwiper" loop :loopedSlides="2">
-    
-    
-    :modules="modules" class="mySwiper">
+        :modules="modules" class="mySwiper" loop :loopedSlides="9">
+
+
+       
         <swiper-slide><img src="../assets/img/bolobnb.jpg" alt=""></swiper-slide>
         <swiper-slide><img src="../assets/img/bolobnb.jpg" alt=""></swiper-slide>
         <swiper-slide><img src="../assets/img/loft1.jpg" alt=""></swiper-slide>
-        <swiper-slide><img src="../assets/img/homeloft.jpg" alt=""></swiper-slide><swiper-slide><img
+        <swiper-slide><img src="../assets/img/homeloft.jpg" alt=""></swiper-slide>
+        <swiper-slide><img src="../assets/img/bolobnb.jpg" alt=""></swiper-slide>
+        <swiper-slide><img src="../assets/img/searchloft.jpg" alt=""></swiper-slide>
+        <swiper-slide><img src="../assets/img/bolobnb.jpg" alt=""></swiper-slide>
+        <swiper-slide><img src="../assets/img/home.jpg" alt=""> </swiper-slide>
+        <swiper-slide><img src="../assets/img/loft1.jpg" alt=""></swiper-slide>
+                <swiper-slide><img src="../assets/img/homeloft.jpg" alt=""></swiper-slide><swiper-slide><img
                 src="../assets/img/bolobnb.jpg" alt=""></swiper-slide>
-        <swiper-slide><img src="../assets/img/searchloft.jpg" alt=""></swiper-slide><swiper-slide><img src="../assets/img/bolobnb.jpg" alt=""></swiper-slide>
-        <swiper-slide><img src="../assets/img/home.jpg" alt=""> </swiper-slide><swiper-slide><img src="../assets/img/loft1.jpg" alt=""></swiper-slide>
+        <swiper-slide><img src="../assets/img/searchloft.jpg" alt=""></swiper-slide><swiper-slide><img
+                src="../assets/img/bolobnb.jpg" alt=""></swiper-slide>
+        <swiper-slide><img src="../assets/img/home.jpg" alt=""> </swiper-slide><swiper-slide><img
+                src="../assets/img/loft1.jpg" alt=""></swiper-slide>    
     </swiper>
 </template>
 <script>
@@ -42,9 +50,6 @@ export default {
 };
 </script>
 <style>
-
-
-
 /* body {
     background: #eee;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -71,7 +76,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-   
+
 }
 
 .swiper-slide img {
