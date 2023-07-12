@@ -41,7 +41,7 @@ export default {
               </li>
         </ul>
       <div class="cta">
-        <a href="#" class="button">Contatti</a>
+        <input class="input" name="text" placeholder="Search..." type="search">
       </div>
       <div class="hamburger">
         <span></span>
@@ -103,11 +103,13 @@ export default {
       display: none;
   }
   .menu{
+
     position: absolute;
     top: 0;
-    right:-100;
+    right: -100%;
+    background-color: #000;
     height: 100vh;
-    padding-top:80px ;
+    padding-top: 80px;
   }
   .menu li {
     display: block;
@@ -129,5 +131,27 @@ export default {
     margin-bottom: 5px;
   }
    }
+   .input {
+  max-width: 190px;
+  background-color: #f5f5f5;
+  color: #047fc1;
+  padding: .15rem .5rem;
+  min-height: 40px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  line-height: 1.15;
+  box-shadow: 0px 10px 20px -18px;
+}
+
+input:focus {
+  border-bottom: 4px solid #050ba4;
+  border-radius: 4px 4px 2px 2px;
+}
+
+input:hover {
+  outline: 1px solid lightgrey;
+}
+
   </style>
 

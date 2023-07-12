@@ -77,8 +77,19 @@ export default {
         </div>
         <img  id="homehero" src="../assets/img/apartament.jpeg" alt="">
     </div>
-    <div class="container mt-4">
+    <div class="container mt-5">
+        <div class="box">
+            <div class="search-box">
+                <input type="text" name="searchbar" placeholder="Search here...">
+                <label for="" class="icon">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #0b57da;"></i>
+                </label>
+            </div>
+        </div>
+    </div>
 
+
+    <div class="container mt-4">
         <div class="row">
             <div class="col-3 mb-5" v-for="apartment in apartments" :key="apartment.id">
                 <div class="column-bg card text-center">
@@ -212,5 +223,43 @@ color: white;
 }
 .big-text{
     font-size: 70px;
+}
+
+.box{
+    max-width: 400px;
+    width: 100%;
+}
+.box .search-box{
+    position: relative;
+    height: 50px;
+    max-width: 380px;
+    background-color: #01ABE3;
+    margin: auto;
+    box-shadow: 0 5px 10px rgba(0,0,0,.25) ;
+    border-radius: 25px;
+}
+.search-box input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px ;
+    background-color: #fff;
+    outline: none;
+    border: none;
+    padding-left: 20px;
+    font-size: 18px;
+}
+.search-box .icon{
+    position: absolute;
+    right: -2px;
+    top: 0;
+    width: 50px;
+    background: #01ABE3;
+    height: 100%;
+    text-align: center ;
+    line-height: 50px;
+    color: black;
+    font-size: 20px ;
+    border-radius: 0 25px 25px 0 ;
 }
 </style>
