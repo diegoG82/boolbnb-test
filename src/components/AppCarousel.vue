@@ -14,6 +14,10 @@
         <swiper-slide><img src="../assets/img/searchloft.jpg" alt=""></swiper-slide><swiper-slide><img src="../assets/img/bolobnb.jpg" alt=""></swiper-slide>
         <swiper-slide><img src="../assets/img/home.jpg" alt=""> </swiper-slide><swiper-slide><img src="../assets/img/loft1.jpg" alt=""></swiper-slide>
     </swiper>
+    <div class="containerbtn">
+        <a  href="#" class="button mt-3 ">See All</a>
+    </div>
+    
 </template>
 <script>
 // Import Swiper Vue.js components
@@ -41,7 +45,7 @@ export default {
     },
 };
 </script>
-<style>
+<style lang="scss" scoped>
 
 
 
@@ -81,6 +85,11 @@ export default {
     object-fit: cover;
     padding: 1.5rem;
 
+}
+.containerbtn{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 </style>
   

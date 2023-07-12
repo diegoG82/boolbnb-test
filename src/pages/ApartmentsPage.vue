@@ -71,10 +71,16 @@ export default {
 </script>
 
 <template>
+        <div class="hero">
+        <div class="hero__content">
+            <h1 class="big-text text-center">APARTMENTS</h1>
+        </div>
+        <img  id="homehero" src="../assets/img/apartament.jpeg" alt="">
+    </div>
     <div class="container mt-4">
 
         <div class="row">
-            <div class="col-3" v-for="apartment in apartments" :key="apartment.id">
+            <div class="col-3 mb-5" v-for="apartment in apartments" :key="apartment.id">
                 <div class="column-bg card text-center">
                     <img :src="getImage(apartment)" alt="Apartment Image">
                     <h5 class="text-uppercase mt-4">{{ apartment.name }}</h5>
@@ -150,5 +156,61 @@ img {
 
 .row {
     margin-top: 50px;
+}
+#homehero{
+    position: absolute;
+    top: 2;
+    right: 30 ;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 0;
+}
+
+
+.hero{
+    position: relative;
+    height: 600px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background: linear-gradient(0deg, rgba(0,0,0,.2) rgba(0,0,0,0.9) 70.71%), url() no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.hero::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.4;
+}
+.hero__content{
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
+    z-index: 1;
+    position: relative;
+}
+.hero__content h1,
+.hero__content p
+{
+color: white;
+}
+.ciao1{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.intro-text{
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+}
+.big-text{
+    font-size: 70px;
 }
 </style>
