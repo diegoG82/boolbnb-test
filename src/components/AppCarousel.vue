@@ -53,14 +53,10 @@ export default {
     },
 };
 </script>
-<<<<<<< HEAD
-<style>
-=======
 <style lang="scss" scoped>
 
 
 
->>>>>>> f4f473a0b21d08854f7a93cf29e3499fef798e2e
 /* body {
     background: #eee;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
