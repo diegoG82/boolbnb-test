@@ -22,6 +22,10 @@
         <swiper-slide><img src="../assets/img/home.jpg" alt=""> </swiper-slide><swiper-slide><img
                 src="../assets/img/loft1.jpg" alt=""></swiper-slide>    
     </swiper>
+    <div class="containerbtn">
+        <a  href="#" class="button mt-3 ">See All</a>
+    </div>
+    
 </template>
 <script>
 // Import Swiper Vue.js components
@@ -49,7 +53,14 @@ export default {
     },
 };
 </script>
+<<<<<<< HEAD
 <style>
+=======
+<style lang="scss" scoped>
+
+
+
+>>>>>>> f4f473a0b21d08854f7a93cf29e3499fef798e2e
 /* body {
     background: #eee;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -86,6 +97,11 @@ export default {
     object-fit: cover;
     padding: 1.5rem;
 
+}
+.containerbtn{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 </style>
   
