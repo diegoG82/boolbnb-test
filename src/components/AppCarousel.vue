@@ -1,8 +1,24 @@
 <template>
     <h2 class="text-center mt-2 mb-2">OUR APARTMENTS:</h2>
     <swiper :spaceBetween="5" :slidesPerView="3" :centeredSlides="false"
-        :autoplay="{ delay: 2500, disableOnInteraction: true }" :pagination="{ clickable: true }" :navigation="true"
-        :modules="modules" class="mySwiper" loop :loopedSlides="2">
+        :autoplay="{ delay: 2500, disableOnInteraction: true }" :pagination="{ clickable: true }"
+        
+        
+        
+        :breakpoints="{
+            '375': {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            '768': {
+                slidesPerView: 2,
+                spaceBetween: 5,
+            },
+            '1024': {
+                slidesPerView: 3,
+                spaceBetween: 5,
+            },
+        }" :navigation="true" :modules="modules" class="mySwiper" loop :loopedSlides="2">
 
 
 
@@ -81,8 +97,8 @@
             </div>
 
 
-         
-    <div class="sponsored"><i class="fa-solid fa-star"></i></div>
+
+            <div class="sponsored"><i class="fa-solid fa-star"></i></div>
         </swiper-slide>
 
         <swiper-slide><img src="../assets/img/loft1.jpg" alt="">
@@ -194,6 +210,84 @@ export default {
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .swiper-slide {
+        width: 100%;
+    }
+
+    .details {
+        top: 160px;
+        right: 10px;
+    }
+
+    .sponsored {
+        bottom: 185px;
+        right: 10px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .swiper-slide {
+        width: 100%;
+    }
+
+    .details {
+        top: 160px;
+        right: 10px;
+        width: 200px;
+    }
+
+    .details h5 {
+        font-size: 0.8rem;
+    }
+
+    .sponsored {
+        bottom: 185px;
+        right: 10px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .swiper-slide {
+        width: 100%;
+    }
+
+    .details {
+        top: 160px;
+        right: 10px;
+    }
+
+    .sponsored {
+        bottom: 185px;
+        right: 10px;
+    }
+}
+
+/* Regole per la risoluzione inferiore a 375px */
+@media screen and (max-width: 375px) {
+    .swiper-slide {
+        width: 100%;
+    }
+
+    .details {
+        top: 160px;
+        right: 10px;
+        width: 200px;
+    }
+
+    .details h5 {
+        font-size: 0.8rem;
+    }
+
+    .sponsored {
+        bottom: 185px;
+        right: 10px;
+    }
 }
 </style>
   

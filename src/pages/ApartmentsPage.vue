@@ -70,37 +70,37 @@ export default {
 };
 </script>
 
+
+
 <template>
-        <div class="hero">
-        <div class="hero__content">
-            <h1 class="big-text text-center">APARTMENTS</h1>
-        </div>
-        <img  id="homehero" src="../assets/img/apartament.jpeg" alt="">
+  <div>
+    <div class="hero">
+      <div class="hero__content">
+        <h1 class="big-text text-center">APARTMENTS</h1>
+      </div>
+      <img id="homehero" src="../assets/img/apartament.jpeg" alt="">
     </div>
     <div class="container mt-4">
-
-        <div class="row">
-            <div class="col-3 mb-5" v-for="apartment in apartments" :key="apartment.id">
-                <div class="column-bg card text-center">
-                    <img :src="getImage(apartment)" alt="Apartment Image">
-                    <h5 class="text-uppercase mt-4">{{ apartment.name }}</h5>
-                    <p class="mt-2"><i class="fa-solid fa-location-dot"></i> {{ apartment.city }}</p>
-                    <div class="d-flex justify-content-center">
-                        <p><i class="fa-solid fa-expand"></i> {{ apartment.square_meters }} sqm </p>
-                        <p><i class="fa-solid fa-bed"></i> {{ apartment.bed_number }}</p>
-                        <p><i class="fa-solid fa-bath"></i> {{ apartment.bathroom_number }}</p>
-                        <p><i class="fa-solid fa-euro-sign"></i> {{ apartment.price }}</p>
-                    </div>
-
-                    <btn class=" details text-center">
-                        <router-link class="nav-link" :to="{ name: 'singleapartment' }">DETAILS</router-link>
-                    </btn>
-                </div>
-
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5" v-for="apartment in apartments" :key="apartment.id">
+          <div class="column-bg card text-center">
+            <img :src="getImage(apartment)" alt="Apartment Image">
+            <h5 class="text-uppercase mt-4">{{ apartment.name }}</h5>
+            <p class="mt-2"><i class="fa-solid fa-location-dot"></i> {{ apartment.city }}</p>
+            <div class="d-flex justify-content-center">
+              <p><i class="fa-solid fa-expand"></i> {{ apartment.square_meters }} sqm </p>
+              <p><i class="fa-solid fa-bed"></i> {{ apartment.bed_number }}</p>
+              <p><i class="fa-solid fa-bath"></i> {{ apartment.bathroom_number }}</p>
+              <p><i class="fa-solid fa-euro-sign"></i> {{ apartment.price }}</p>
             </div>
+            <btn class="details text-center">
+              <router-link class="nav-link" :to="{ name: 'singleapartment' }">DETAILS</router-link>
+            </btn>
+          </div>
         </div>
-
+      </div>
     </div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
@@ -108,7 +108,6 @@ export default {
 
 
 .container {
-    // height: calc(100vh - 250px);
 
     .card {
         height: 350px;
@@ -133,6 +132,7 @@ export default {
         margin: 0 auto;
         padding: 0.3rem;
         font-size: 0.9rem;
+        z-index: 1;
     }
 }
 
