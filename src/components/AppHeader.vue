@@ -37,8 +37,7 @@ export default {
 </script>
 
 <template>
-  <div class="container  ">
-      <div class="header">
+  <div class="header fixed-header">
     <div class="logo">
         <img src="../assets/img/" alt="logo.pnh">
       </div>
@@ -55,10 +54,16 @@ export default {
         <span></span>
         <span></span>
       </div>
-  </div>
-  </div>
+  </div> 
 
-  
+  <div class="container">
+    <div class="header">
+
+    </div>
+    <div class="content">
+      <!-- Il tuo contenuto -->
+    </div>
+  </div>
   
   
   </template>
@@ -77,6 +82,7 @@ export default {
   
   }
   
+  
   .menu{
     width: 100%;
   }
@@ -85,7 +91,7 @@ export default {
     display: inline-block;
   }
   .menu li a {
-    color: black;
+    color: white;
     font-size: 20px ;
     display: block;
     padding: 15px;
