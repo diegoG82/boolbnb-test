@@ -144,6 +144,9 @@ export default {
     },
 };
 </script>
+
+
+
 <style lang="scss" scoped>
 .swiper {
     margin-top: 10px;
@@ -214,5 +217,33 @@ export default {
     justify-content: center;
     margin-bottom: 30px;
 }
+
+
+@media (max-width: 810px){
+    .details {
+  position: absolute;
+  width: 450px;
+  top: 210px;
+  right: 330px;
+  color: whitesmoke;
+  z-index: 999;
+}
+
+
+}
+@media (max-width: 428px){
+    .details {
+  position: absolute;
+  width: 450px;
+  top: 210px;
+  right: 395px;
+  color: whitesmoke;
+  z-index: 999;
+}
+
+
+}
+
+
+
 </style>
-  
