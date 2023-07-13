@@ -1,8 +1,27 @@
 <template>
     <h2 class="text-center mt-2 mb-2">OUR APARTMENTS:</h2>
     <swiper :spaceBetween="5" :slidesPerView="3" :centeredSlides="false"
-        :autoplay="{ delay: 2500, disableOnInteraction: true }" :pagination="{ clickable: true }" :navigation="true"
-        :modules="modules" class="mySwiper" loop :loopedSlides="2">
+
+
+    :autoplay="{ delay: 2500, disableOnInteraction: true }" :pagination="{ clickable: true }"
+        
+        
+        
+        :breakpoints="{
+            '375': {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            '768': {
+                slidesPerView: 2,
+                spaceBetween: 5,
+            },
+            '1024': {
+                slidesPerView: 3,
+                spaceBetween: 5,
+            },
+        }" :navigation="true" :modules="modules" class="mySwiper" loop :loopedSlides="2">
+     
 
 
 
