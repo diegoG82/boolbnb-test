@@ -81,7 +81,7 @@ export default {
       <img id="homehero" src="../assets/img/apartament.jpeg" alt="">
     </div>
     <!-- search bar -->
-    <div class="container mt-5">
+    <div class="container ">
         <div class="box">
             <div class="search-box">
               <input type="text" placeholder="Search here...">
