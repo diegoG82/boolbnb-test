@@ -47,9 +47,9 @@ export default {
                 <router-link class="nav-link" :to="menuItem.routeName">{{ menuItem.label }}</router-link>
               </li>
         </ul>
-      <div class="cta">
-        <a  href="#" class="button mt-5">Contatti</a>
-      </div>
+        <div class="cta">
+          <a href="" class="button">Contatti</a>
+        </div>
       <div class="hamburger" @click="toggleMenu">
         <span></span>
         <span></span>
