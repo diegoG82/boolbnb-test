@@ -1,74 +1,78 @@
 <template>
     <div class="hero">
-        <div class="hero__content">
+        <div class="ms-container hero__content mt-4">
             <h1 class="big-text">{{ apartment.name }}</h1>
-            <p>{{ apartment.address }} {{ apartment.city }} {{ apartment.state }}</p>
+            <p>{{ apartment.address }}, {{ apartment.city }} </p>
         </div>
-        <img id="homehero" src="../assets/img/loft1.jpg" alt="">
+        <img id="homehero" :src="imagePath" alt="">
     </div>
 
+    <div class="ms-container mt-4">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="house">
+                    <div class="details d-flex mt-4">
+                        <p><i class="fa-solid fa-expand m-1"></i>{{ apartment.square_meters }} sqm</p>
+                        <p><i class="fa-solid fa-bed m-1"></i>{{ apartment.bed_number }}</p>
+                        <p><i class="fa-solid fa-bath m-1"></i>{{ apartment.bathroom_number }}</p>
+                        <p><i class="fa-solid fa-euro-sign m-1"></i>{{ apartment.price }} per night</p>
+                    </div>
 
-    <div class="ms-container house mt-4 d-flex">
+                    <div class="services mt-4">
+                        <button class="btn m-2"><i class="fa-solid fa-wifi"></i>wifi</button>
+                        <button class="btn m-2"><i class="fa-solid fa-square-parking"></i>parking</button>
+                        <button class="btn m-2"><i class="fa-solid fa-person-swimming"></i>swimming pool</button>
+                    </div>
 
-        <div class=" mt-4 ">
-            <div class="details d flex">
-                <p><i class="fa-solid fa-expand"></i> {{ apartment.square_meters }} sqm</p>
-                <p><i class="fa-solid fa-bed"></i> {{ apartment.bed_number }}</p>
-                <p><i class="fa-solid fa-bath"></i> {{ apartment.bathroom_number }}</p>
-                <p><i class="fa-solid fa-euro-sign"></i> {{ apartment.price }} at night</p>
+                    <div class="description mt-4">
+                        <h2 class="mb-2 m-2">About the apartment:</h2>
+                        <p class="m-2">{{ apartment.description }}</p>
+                    </div>
+                </div>
             </div>
 
-            <br class="">
+            <div class="col-md-4">
+                <div class="contact-us mt-4">
+                    <form @submit="submitForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" v-model="form.name" class="form-control" id="name" placeholder="Name"
+                                required >
+                        </div>
+                        <div class="mb-3">
+                            <label for="surname" class="form-label">Surname</label>
+                            <input type="text" v-model="form.surname" class="form-control" id="surname"
+                                placeholder="Surname" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" v-model="form.email" class="form-control" id="email"
+                                placeholder="name@example.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea v-model="form.message" class="form-control" id="message" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Contact Us</button>
+                    </form>
+                </div>
 
-            <div class="services mt-4 d-flex "> <button class="btn"><i class="fa-solid fa-wifi"></i> wifi</button>
-                <button class="btn"><i class="fa-solid fa-square-parking"></i> Parking</button>
-                <button class="btn"><i class="fa-solid fa-person-swimming"></i> Swimming Pool</button>
-            </div>
 
-
-            <div class="description mt-4 d-flex">
-                <p>{{ apartment.description }}</p>
             </div>
 
 
         </div>
 
-
-
-
-        <div class="contact-us d-flex mt-4">
-            <form>
-                <div>
-                    <label for="name" class="form-label">Name</label>
-                    <input type="name" class="form-control" id="name" placeholder="Name">
+        <div class="row mt-2">
+            <div class="col-md-12">
+                <div class="map mt-4 mb-4">
+                    <img :src="mapImage" alt="Map">
                 </div>
-                <div>
-                    <label for="surname" class="form-label">Surname</label>
-                    <input type="Surname" class="form-control" id="surname" placeholder="Surname">
-                </div>
-
-
-                <div>
-                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Contact Us</button>
-            </form>
+            </div>
         </div>
-
-     
-    </div>
-
-    <div class="ms-container map mt-4 mb-4">
-        <img src="../assets/img/map.png" alt="">
-
     </div>
 </template>
-  
+    
 <script>
 import bolobnbImage from '../assets/img/loft1.jpg';
 
@@ -78,25 +82,46 @@ export default {
         return {
             apartment: {
                 name: "Design Club Collection",
-                description: "Progettato da architetti di fama internazionale, l'edificio completamente ristrutturato vanta appartamenti con una selezione di iconici elementi di design moderno che uniscono qualità estetica con qualità funzionale e funzionale...",
+                description: "Designed by internationally renowned architects, the completely renovated building features apartments with a selection of iconic modern design elements that combine aesthetic quality with functional functionality...",
                 square_meters: 100,
                 bed_number: 3,
                 bathroom_number: 2,
-                room_number: 3,
                 address: "Via Nazario Sauro, 25",
                 city: "Bologna",
-                state: "Italia",
+                state: "Italy",
                 latitude: 44.49801,
                 longitude: 11.33979,
                 price: 500.0,
             },
             imagePath: bolobnbImage,
+            form: {
+                name: "",
+                surname: "",
+                email: "",
+                message: ""
+            }
         };
     },
+    computed: {
+        mapImage() {
+            return `../assets/img/map.png?lat=${this.apartment.latitude}&lon=${this.apartment.longitude}`;
+        }
+    },
+    methods: {
+        submitForm() {
+            // Handle form submission logic here
+            // You can access the form data using this.form object
+            console.log("Form submitted:", this.form);
+        }
+    }
 };
 </script>
-  
-<style lang="scss" scoped>
+    
+<style scoped>
+body {
+    background: grey;
+}
+
 #homehero {
     position: absolute;
     top: 2;
@@ -116,6 +141,7 @@ export default {
     background-size: cover;
     object-fit: cover;
     overflow: hidden;
+
 }
 
 .hero::after {
@@ -131,6 +157,7 @@ export default {
 }
 
 .hero__content {
+    /* border: 1px solid white; */
     width: 100%;
     max-width: 1350px;
     margin: 0 auto;
@@ -141,11 +168,6 @@ export default {
 .hero__content h1,
 .hero__content p {
     color: white;
-}
-
-.ciao1 {
-    display: flex;
-    flex-direction: row-reverse;
 }
 
 .intro-text {
@@ -159,74 +181,76 @@ export default {
 }
 
 .ms-container {
-    width: 100%;
-    max-width: 1350px;
+    width: 70%;
     margin: 0 auto;
-
-    .services {
-        width: 100%;
-
-        .btn {
-            background-color: #01abe3;
-            color: white;
-            border-radius: 20px;
-            margin-right: 1rem;
-        }
-    }
-
-    .house {
-        width: 100%;
-        height: auto;
-    }
-
-    .details {
-        width: 100%;
-
-        p {
-            margin-right: 1rem;
-        }
-
-        i {
-            color: #01abe3;
-        }
-    }
-
-    .description {
-        width: 100%;
-        font-size: 25px;
-        margin-bottom: 2rem;
-    }
-
-    .contact-us {
-        width: 100%;
-        border: 5px solid #01abe3;
-        background-color: white;
-        font-size: 1rem;
-        border-radius: 30px;
-        padding: 2rem;
-        margin-top: 2rem;
-
-        .btn {
-            background-color: #01abe3;
-            color: white;
-            border: none;
-            border-radius: 20px;
-        }
-    }
+    /* border: 1px solid black; */
 }
 
-.map {
+.ms-container .house {
+    width: 70%;
+}
+
+.ms-container .details {
+    width: 70%;
+}
+
+.ms-container .details p {
+    margin-right: 1rem;
+}
+
+.ms-container .details i {
+    color: #01abe3;
+}
+
+.ms-container .services {
+    width: 70%;
+}
+
+.ms-container .services .btn {
+    background-color: #01abe3;
+    font-size: 1rem;
+    color: white;
+    border-radius: 20px;
+    margin-right: 1rem;
+}
+
+.ms-container .description {
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 2rem;
+    /* border: 1px solid black; */
+}
+
+.ms-container .map {
     height: 300px;
-    position: relative;
-
-    img {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-    }
+    border: 5px solid #01abe3;
+    border-radius: 15px;
+    margin-top: 2rem;
 }
 
-@media (max-width: 768px) {
+.ms-container .map img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.ms-container .contact-us {
+    margin-top: 2rem;
+    width: 70%;
+    padding: 1rem;
+    border: 5px solid #01abe3;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.ms-container .contact-us .btn {
+    background-color: #01abe3;
+    color: white;
+    border: none;
+    margin-right: 1rem;
+}
+
+@media (max-width: 810px) {
     .hero {
         height: 300px;
     }
@@ -235,36 +259,60 @@ export default {
         font-size: 40px;
     }
 
-    .ms-container {
-        .services {
-            flex-wrap: wrap;
-
-            .btn {
-                margin-bottom: 1rem;
-            }
-        }
-
-        .description {
-            margin-bottom: 2rem;
-        }
-
-        .contact-us {
-            width: 100%;
-            margin-top: 2rem;
-        }
-    }
-
-    .map {
+    .ms-container .map {
         height: 200px;
     }
-}
-
-@media (max-width: 375px) {
+    
     .ms-container {
-        .description {
-            font-size: 20px;
-        }
+        width: 90%;
+    }
+
+    .ms-container .house,
+    .ms-container .details,
+    .ms-container .services,
+    .ms-container .description,
+    .ms-container .contact-us {
+        width: 100%;
     }
 }
-</style>
 
+@media (max-width: 428px) {
+    .hero {
+        height: 200px;
+    }
+
+    .big-text {
+        font-size: 30px;
+    }
+
+    .ms-container .map {
+        height: 150px;
+    }
+
+    .ms-container {
+        width: 90%;
+    }
+
+    .ms-container .house,
+    .ms-container .details,
+    .ms-container .services,
+    .ms-container .description,
+    .ms-container .contact-us {
+        width: 100%;
+        font-size: 0.7rem;
+    }
+
+    .ms-container .services .btn {
+        font-size: 0.6rem;
+        padding: 0.4rem;
+        margin-right: 0.5rem;
+    }
+
+    .ms-container .contact-us .btn {
+        font-size: 0.6rem;
+        padding: 0.5rem;
+        margin-right: 0.5rem;
+    }
+}
+
+</style>
