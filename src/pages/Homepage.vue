@@ -14,10 +14,14 @@ export default {
 <template>
     <div class="hero">
         <div class="hero__content">
-          <h3 class="text-center text-white">searcjbar</h3>
-            <p class="intro-text">BoolBnB</p>
-            <h1 class="big-text">Host indimenticabili per <br>  soggiorni indimenticabili</h1>
-            <a  href="#" class="button mt-5">Discover More</a>
+                      <div class="input-container">
+              <input type="text" name="" id="" placeholder="Dove sei diretto ?">
+            </div>
+            <p class="intro-text text-center">BoolBnB</p>
+            <h1 class="big-text text-center">Host indimenticabili per <br>  soggiorni indimenticabili</h1>
+            <div class="input-container">
+              <input type="text" name="" id="" placeholder="Dove sei diretto ?">
+            </div>
         </div>
         <img  id="homehero" src="../assets/img/home.jpg" alt="">
     </div>
@@ -157,6 +161,10 @@ color: white;
 }
 
  }
-
+ .input-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Adjust as needed */
+}
  
 </style>
