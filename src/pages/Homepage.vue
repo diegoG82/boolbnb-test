@@ -14,6 +14,7 @@ export default {
 <template>
     <div class="hero">
         <div class="hero__content">
+          <h3 class="text-center text-white">searcjbar</h3>
             <p class="intro-text">BoolBnB</p>
             <h1 class="big-text">Host indimenticabili per <br>  soggiorni indimenticabili</h1>
             <a  href="#" class="button mt-5">Discover More</a>
@@ -79,11 +80,11 @@ color: white;
 }
 .intro-text{
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
 }
 .big-text{
-    font-size: 70px;
+    font-size: 80px;
 }
 
 .mission{
@@ -152,7 +153,7 @@ color: white;
 
 @media(max-width:768px) {
 .big-text{
-    font-size: 40px;
+    font-size: 35px;
 }
 
  }
