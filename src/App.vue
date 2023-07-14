@@ -10,7 +10,7 @@ export default {
 
 </script>
 <template>
-  <AppHeader />
+  <!-- <AppHeader /> -->
   <router-view />
   <AppFooter />
 </template>

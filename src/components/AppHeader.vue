@@ -71,7 +71,7 @@ export default {
   <style lang="scss" sccoped>
   .header{
   width: 100%;
-  position: fixed;
+  // position: fixed;
   top: 0;
   left: 50%;
   transform: translateX(-50%);

@@ -22,6 +22,9 @@
                         <button class="btn m-2"><i class="fa-solid fa-wifi"></i>wifi</button>
                         <button class="btn m-2"><i class="fa-solid fa-square-parking"></i>parking</button>
                         <button class="btn m-2"><i class="fa-solid fa-person-swimming"></i>swimming pool</button>
+                        <button class="btn m-2"><i class="fa-solid fa-wifi"></i>wifi</button>
+                        <button class="btn m-2"><i class="fa-solid fa-square-parking"></i>parking</button>
+                        <button class="btn m-2"><i class="fa-solid fa-person-swimming"></i>swimming pool</button>
                     </div>
 
                     <div class="description mt-4">

@@ -165,7 +165,7 @@ export default {
   object-fit: cover;
   border-radius: 50%;
   z-index: 999;
-  border: 0.5rem solid rgb(12, 190, 202);
+  border: 0.2rem solid rgb(12, 190, 202);
   position: absolute;
   top: 35%;
   left: 50%;
