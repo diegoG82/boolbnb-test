@@ -15,12 +15,10 @@ export default {
     <div class="hero">
         <div class="hero__content">
                       <div class="input-container">
-              <input type="text" name="" id="" placeholder="Dove sei diretto ?">
             </div>
             <p class="intro-text text-center">BoolBnB</p>
             <h1 class="big-text text-center">Host indimenticabili per <br>  soggiorni indimenticabili</h1>
             <div class="input-container">
-              <input type="text" name="" id="" placeholder="Dove sei diretto ?">
             </div>
         </div>
         <img  id="homehero" src="../assets/img/home.jpg" alt="">

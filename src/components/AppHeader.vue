@@ -1,4 +1,3 @@
-
 <script>
 export default {
   name: "AppHeader",
@@ -35,7 +34,9 @@ export default {
       this.isMenuOpen = !this.isMenuOpen;
     },
     closeMenu() {
-      this.isMenuOpen = false;
+      if (this.isIPhoneLayout) {
+        this.isMenuOpen = false;
+      }
     },
     checkLayout() {
       this.isIPhoneLayout = window.innerWidth <= 768;
@@ -50,6 +51,7 @@ export default {
 };
 </script>
 
+
 <template>
   <div class="container">
     <div class="header">
@@ -60,6 +62,9 @@ export default {
         <span></span>
         <span></span>
         <span></span>
+      </div>
+      <div class="close-button" v-if="isMenuOpen && !isIPhoneLayout" @click="closeMenu">
+        <span>X</span>
       </div>
       <ul class="menu" :class="{ open: isMenuOpen }">
         <li class="nav-item" v-for="menuItem in menuItems" :key="menuItem.routeName">
@@ -75,6 +80,8 @@ export default {
     </div>
   </div>
 </template>
+
+
 
 <style lang="scss" scoped>
 .header {
@@ -129,6 +136,24 @@ export default {
   cursor: pointer;
 }
 
+.close-button {
+  cursor: pointer;
+  color: rgb(255, 0, 0);
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+.close-button span {
+  color: red;
+  display: inline-block;
+  transform: rotate(45deg);
+}
+
+.close-button:hover span {
+  transform: rotate(225deg);
+  color: red;
+}
+
 @media (max-width: 768px) {
   .cta {
     display: none;
@@ -170,6 +195,7 @@ export default {
   }
 }
 </style>
+
 
 
 
