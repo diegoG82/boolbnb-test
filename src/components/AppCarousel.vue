@@ -8,11 +8,11 @@
         
         
         :breakpoints="{
-            '375': {
+            '428': {
                 slidesPerView: 1,
                 spaceBetween: 20,
             },
-            '768': {
+            '810': {
                 slidesPerView: 2,
                 spaceBetween: 5,
             },
@@ -168,7 +168,6 @@ export default {
     object-fit: cover;
     padding: 1.5rem;
     filter: brightness(80%);
-    /* Modifica la percentuale di luminosità (50% in questo esempio) */
 
 
 

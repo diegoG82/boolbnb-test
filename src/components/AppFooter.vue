@@ -47,11 +47,6 @@ p {
     align-items: flex-start;
     height: auto;
   }
-
- 
-
-
- 
 }
 
 @media (max-width: 428px) {
@@ -65,10 +60,6 @@ p {
   .right{
     justify-content: center;
   }
-
-  // .footer .col-md-6 p {
-  //   display: none;
-  // }
 
 
 }

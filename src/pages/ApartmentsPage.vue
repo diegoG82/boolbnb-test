@@ -1,3 +1,34 @@
+<template>
+    <div>
+        <div class="hero">
+            <div class="container">
+                <h1 class="big-text text-center">APARTMENTS</h1>
+            </div>
+            <img id="homehero" src="../assets/img/apartament.jpeg" alt="">
+        </div>
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-5" v-for="apartment in apartments" :key="apartment.id">
+                    <div class="column-bg card text-center">
+                        <img :src="getImage(apartment)" alt="Apartment Image">
+                        <h6 class="text-uppercase mt-4">{{ apartment.name }}</h6>
+                        <p class="mt-2"><i class="fa-solid fa-location-dot"></i> {{ apartment.city }}</p>
+                        <div class="d-flex justify-content-center">
+                            <p><i class="fa-solid fa-expand"></i> {{ apartment.square_meters }} sqm </p>
+                            <p><i class="fa-solid fa-bed"></i> {{ apartment.bed_number }}</p>
+                            <p><i class="fa-solid fa-bath"></i> {{ apartment.bathroom_number }}</p>
+                            <p><i class="fa-solid fa-euro-sign"></i> {{ apartment.price }}</p>
+                        </div>
+                        <btn class="details text-center">
+                            <router-link class="nav-link" :to="{ name: 'singleapartment' }">DETAILS</router-link>
+                        </btn>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
 <script>
 export default {
     data() {
@@ -5,9 +36,61 @@ export default {
             apartments: [
                 {
                     user_id: 3,
-                    name: "Casa Giostrello ",
-                    description:
-                        "Casa Giostrello è un grazioso mini-appartamento indipendente in un parco residenziale, nella zona alta...",
+                    name: "Casa Giostrello",
+                    description: "Casa Giostrello è un grazioso mini-appartamento indipendente in un parco residenziale...",
+                    square_meters: 320,
+                    bed_number: 2,
+                    bathroom_number: 2,
+                    room_number: 4,
+                    address: "Viale Pasitea",
+                    city: "Positano",
+                    state: "Italia",
+                    latitude: 40.62829,
+                    longitude: 14.48427,
+                    price: 200.0,
+                    image: "homeloft.jpg",
+                    visibility: true,
+                },
+                {
+                    user_id: 3,
+                    name: "Casa Giostrello",
+                    description: "Casa Giostrello è un grazioso mini-appartamento indipendente in un parco residenziale...",
+                    square_meters: 320,
+                    bed_number: 2,
+                    bathroom_number: 2,
+                    room_number: 4,
+                    address: "Viale Pasitea",
+                    city: "Positano",
+                    state: "Italia",
+                    latitude: 40.62829,
+                    longitude: 14.48427,
+                    price: 200.0,
+                    image: "homeloft.jpg",
+                    visibility: true,
+                },
+
+                {
+                    user_id: 3,
+                    name: "Casa Giostrello",
+                    description: "Casa Giostrello è un grazioso mini-appartamento indipendente in un parco residenziale...",
+                    square_meters: 320,
+                    bed_number: 2,
+                    bathroom_number: 2,
+                    room_number: 4,
+                    address: "Viale Pasitea",
+                    city: "Positano",
+                    state: "Italia",
+                    latitude: 40.62829,
+                    longitude: 14.48427,
+                    price: 200.0,
+                    image: "homeloft.jpg",
+                    visibility: true,
+                },
+
+                {
+                    user_id: 3,
+                    name: "Casa Giostrello",
+                    description: "Casa Giostrello è un grazioso mini-appartamento indipendente in un parco residenziale...",
                     square_meters: 320,
                     bed_number: 2,
                     bathroom_number: 2,
@@ -59,6 +142,42 @@ export default {
                     visibility: true,
                 },
 
+                {
+                    user_id: 3,
+                    name: "Casa Giostrello",
+                    description: "Casa Giostrello è un grazioso mini-appartamento indipendente in un parco residenziale...",
+                    square_meters: 320,
+                    bed_number: 2,
+                    bathroom_number: 2,
+                    room_number: 4,
+                    address: "Viale Pasitea",
+                    city: "Positano",
+                    state: "Italia",
+                    latitude: 40.62829,
+                    longitude: 14.48427,
+                    price: 200.0,
+                    image: "homeloft.jpg",
+                    visibility: true,
+                },
+
+                {
+                    user_id: 3,
+                    name: "Casa Giostrello",
+                    description: "Casa Giostrello è un grazioso mini-appartamento indipendente in un parco residenziale...",
+                    square_meters: 320,
+                    bed_number: 2,
+                    bathroom_number: 2,
+                    room_number: 4,
+                    address: "Viale Pasitea",
+                    city: "Positano",
+                    state: "Italia",
+                    latitude: 40.62829,
+                    longitude: 14.48427,
+                    price: 200.0,
+                    image: "homeloft.jpg",
+                    visibility: true,
+                },  
+                // Resto dell'array degli appartamenti...
             ],
         };
     },
@@ -70,50 +189,14 @@ export default {
 };
 </script>
 
-
-
-<template>
-  <div>
-    <div class="hero">
-      <div class="hero__content">
-        <h1 class="big-text text-center">APARTMENTS</h1>
-      </div>
-      <img id="homehero" src="../assets/img/apartament.jpeg" alt="">
-    </div>
-    <div class="container mt-4">
-      <div class="row">
-        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-5" v-for="apartment in apartments" :key="apartment.id">
-          <div class="column-bg card text-center">
-            <img :src="getImage(apartment)" alt="Apartment Image">
-            <h5 class="text-uppercase mt-4">{{ apartment.name }}</h5>
-            <p class="mt-2"><i class="fa-solid fa-location-dot"></i> {{ apartment.city }}</p>
-            <div class="d-flex justify-content-center">
-              <p><i class="fa-solid fa-expand"></i> {{ apartment.square_meters }} sqm </p>
-              <p><i class="fa-solid fa-bed"></i> {{ apartment.bed_number }}</p>
-              <p><i class="fa-solid fa-bath"></i> {{ apartment.bathroom_number }}</p>
-              <p><i class="fa-solid fa-euro-sign"></i> {{ apartment.price }}</p>
-            </div>
-            <btn class="details text-center">
-              <router-link class="nav-link" :to="{ name: 'singleapartment' }">DETAILS</router-link>
-            </btn>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</template>
-
 <style lang="scss" scoped>
-// Variabili
-
-
 .container {
-
     .card {
         height: 350px;
+        width: 250px;
         border: 1px solid #01ABE3;
         border-radius: 0%;
-        // border: none;
+        margin: 0 auto;
 
         p {
             margin-right: 5px;
@@ -123,7 +206,6 @@ export default {
             color: #01ABE3;
         }
     }
-
 
     .details {
         border: 1px solid #01ABE3;
@@ -141,7 +223,6 @@ export default {
 }
 
 img {
-
     width: 100%;
     height: 150px;
     object-fit: cover;
@@ -157,28 +238,28 @@ img {
 .row {
     margin-top: 50px;
 }
-#homehero{
+
+#homehero {
     position: absolute;
     top: 2;
-    right: 30 ;
+    right: 30;
     min-width: 100%;
     min-height: 100%;
     z-index: 0;
 }
 
-
-.hero{
+.hero {
     position: relative;
     height: 600px;
     display: flex;
     width: 100%;
     align-items: center;
-    background: linear-gradient(0deg, rgba(0,0,0,.2) rgba(0,0,0,0.9) 70.71%), url() no-repeat center center;
+    background: linear-gradient(0deg, rgba(0, 0, 0, .2) rgba(0, 0, 0, 0.9) 70.71%), url() no-repeat center center;
     background-size: cover;
     overflow: hidden;
 }
 
-.hero::after{
+.hero::after {
     content: '';
     width: 100%;
     height: 100%;
@@ -189,28 +270,43 @@ img {
     background-color: black;
     opacity: 0.4;
 }
-.hero__content{
-    width: 100%;
-    max-width: 1350px;
+
+.container {
     margin: 0 auto;
     z-index: 1;
     position: relative;
+    color: white;
 }
+
 .hero__content h1,
-.hero__content p
-{
-color: white;
+.hero__content p {
+    color: white;
 }
-.ciao1{
-  display: flex;
-  flex-direction: row-reverse;
+
+.ciao1 {
+    display: flex;
+    flex-direction: row-reverse;
 }
-.intro-text{
+
+.intro-text {
     text-transform: uppercase;
     font-size: 20px;
     font-weight: bold;
 }
-.big-text{
-    font-size: 70px;
+
+.big-text {
+    font-size: 50px;
+}
+
+@media (max-width: 810px) {
+    .card {
+        width: 50%;
+    }
+}
+
+@media (max-width: 428px) {
+    .card {
+        width: 100%;
+    }
 }
 </style>
